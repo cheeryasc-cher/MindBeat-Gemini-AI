@@ -193,7 +193,7 @@
       const btn = document.getElementById('saveBtn');
       btn.innerText = (currentLang === 'TH' ? "กำลังบันทึก..." : "Saving..."); 
       btn.disabled = true;
-      google.script.run.withSuccessHandler(res => { alert(res); btn.innerText = "บันทึกเรียบร้อย ✅ : "Saved ✅"; btn.disabled = false; }).saveToAll(msg, lastHook, currentLang);
+      google.script.run.withSuccessHandler(res => { alert(res); btn.innerText = "บันทึกเรียบร้อย ✅" : "Saved ✅"; btn.disabled = false; }).saveToAll(msg, lastHook, currentLang);
     }
   </script>
 </body>
