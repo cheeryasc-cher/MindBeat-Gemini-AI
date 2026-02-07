@@ -191,8 +191,9 @@
     function saveToMemory() {
       const msg = document.getElementById('userInput').value;
       const btn = document.getElementById('saveBtn');
-      btn.innerText = "กำลังบันทึก..."; btn.disabled = true;
-      google.script.run.withSuccessHandler(res => { alert(res); btn.innerText = "บันทึกเรียบร้อย ✅"; btn.disabled = false; }).saveToAll(msg, lastHook);
+      btn.innerText = (currentLang === 'TH' ? "กำลังบันทึก..." : "Saving..."); 
+      btn.disabled = true;
+      google.script.run.withSuccessHandler(res => { alert(res); btn.innerText = "บันทึกเรียบร้อย ✅ : "Saved ✅"; btn.disabled = false; }).saveToAll(msg, lastHook, currentLang);
     }
   </script>
 </body>
